@@ -36,21 +36,22 @@ export default function Home() {
           <div>
             <h2>Why am I doing this</h2>
             <p>
-              I'm driven by a simple mission—to make a positive impact and help
-              everyone live their absolute best lives. On a professional level,
-              this translates into crafting visual identities for businesses and
-              helping other humans and companies achieve their goals, a journey
-              where design becomes more than aesthetics—it's about creating a
-              visual narrative that connects and elevates. But it doesn't end
-              there. Finding fulfillment in guiding young designers as they
-              navigate their careers, I aim to share what I've learned and
-              experienced through my journey. It goes beyond the design realm,
-              there's a deeper purpose; it's about instilling a love for
-              producing meaningful creations and working passionately to create
-              value for everything around us. My goal is to create a ripple
-              effect where my work touches businesses, other designers, and
-              everyone involved—It's all about spreading kindness and fostering
-              a culture of genuine connections.
+              I&apos;m driven by a simple mission—to make a positive impact and
+              help everyone live their absolute best lives. On a professional
+              level, this translates into crafting visual identities for
+              businesses and helping other humans and companies achieve their
+              goals, a journey where design becomes more than
+              aesthetics—it&apos;s about creating a visual narrative that
+              connects and elevates. But it doesn&apos;t end there. Finding
+              fulfillment in guiding young designers as they navigate their
+              careers, I aim to share what I&apos;ve learned and experienced
+              through my journey. It goes beyond the design realm, there&apos;s
+              a deeper purpose; it&apos;s about instilling a love for producing
+              meaningful creations and working passionately to create value for
+              everything around us. My goal is to create a ripple effect where
+              my work touches businesses, other designers, and everyone
+              involved—It&apos;s all about spreading kindness and fostering a
+              culture of genuine connections.
             </p>
             <i>And this is only my new starting point!</i>
           </div>
