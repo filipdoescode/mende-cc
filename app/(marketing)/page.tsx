@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Image_1 from "@/public/images/landing/1.webp"
 
 const traits = ["Visual Identity Designer", "Human Being", "All-round creative"]
 
