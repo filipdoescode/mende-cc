@@ -1,5 +1,7 @@
 import Image from "next/image"
 
+import { HeadingHighlight } from "@/components/heading-highlight"
+
 const traits = ["Visual Identity Designer", "Human Being", "All-round creative"]
 
 export default function Home() {
@@ -7,8 +9,11 @@ export default function Home() {
     <div>
       <section className="container py-64">
         <h1 className="max-[970px] mx-auto text-center text-6xl">
-          Build a Brand Presence that <br />
-          Represents You and Connects with <br /> your target audience
+          Build a <HeadingHighlight>Brand Presence</HeadingHighlight>&nbsp;that
+          <br />
+          <HeadingHighlight>Represents You</HeadingHighlight> and{" "}
+          <HeadingHighlight>Connects</HeadingHighlight> with <br /> your target
+          audience
         </h1>
       </section>
 

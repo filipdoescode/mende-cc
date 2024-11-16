@@ -1,6 +1,8 @@
 import { Icons } from "@/components/icons"
 import { NavItems } from "@/components/nav-items"
 
+import { HamburgerIcon } from "./hamburger-menu"
+
 const navItems_1 = [
   {
     href: "/",
@@ -24,18 +26,20 @@ const navItems_2 = [
 
 export function Header() {
   return (
-    <header className="container flex justify-between py-14">
-      <nav>
+    <header className="container flex justify-between py-8 lg:py-14">
+      <nav className="hidden lg:block">
         <NavItems items={navItems_1} />
       </nav>
 
-      <div className="translate-y-2">
-        <Icons.logo />
+      <div className="lg:translate-y-2">
+        <Icons.logo className="max-lg:h-[30px] max-lg:w-14" />
       </div>
 
-      <nav>
+      <nav className="hidden lg:block">
         <NavItems items={navItems_2} />
       </nav>
+
+      <HamburgerIcon />
     </header>
   )
 }

@@ -70,7 +70,7 @@ export default {
       },
       fontFamily: {
         ["general-sans"]: ["var(--font-general-sans)", ...fontFamily.sans],
-        // heading: ["var(--font-heading)", ...fontFamily.sans],
+        ["artbrush"]: ["var(--font-artbrush)", ...fontFamily.sans],
       },
     },
   },

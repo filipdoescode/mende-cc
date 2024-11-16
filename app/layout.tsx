@@ -37,6 +37,12 @@ const generalSans = localFont({
   ],
 })
 
+const artbrush = localFont({
+  variable: "--font-artbrush",
+  weight: "400",
+  src: "./fonts/artbrush/artbrush.ttf",
+})
+
 export const metadata: Metadata = {
   title: "Mende Creative Corner",
   description: "The corner of creativity",
@@ -51,8 +57,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "font-general-sans min-h-screen bg-background antialiased",
-          generalSans.variable
+          "min-h-screen bg-background font-general-sans antialiased",
+          generalSans.variable,
+          artbrush.variable
         )}
       >
         {children}
