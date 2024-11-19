@@ -61,8 +61,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <div className="mt-20">Whatt</div>
     </div>
   )
 }
