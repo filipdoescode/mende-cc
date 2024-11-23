@@ -1,6 +1,8 @@
 import Image from "next/image"
 import { landingContent } from "@/content/landing"
 
+import { Heading } from "@/components/ui/heading"
+import { BoxReveal } from "@/components/box-reveal"
 import { ConnectBanner } from "@/components/connect-banner"
 import { FaqAccordion } from "@/components/faq-accordion"
 import { HeadingHighlight } from "@/components/heading-highlight"
@@ -13,13 +15,16 @@ export default function Home() {
   return (
     <div className="space-y-40">
       <section className="container py-64">
-        <h1 className="max-[970px] mx-auto text-center text-6xl">
-          Build a <HeadingHighlight>Brand Presence</HeadingHighlight>&nbsp;that
-          <br />
-          <HeadingHighlight>Represents You</HeadingHighlight> and{" "}
-          <HeadingHighlight>Connects</HeadingHighlight> with <br /> your target
-          audience
-        </h1>
+        <BoxReveal width="100%">
+          <Heading as="h1" className="max-[970px] mx-auto p-2 text-center">
+            Build a <HeadingHighlight>Brand Presence</HeadingHighlight>
+            &nbsp;that
+            <br />
+            <HeadingHighlight>Represents You</HeadingHighlight> and{" "}
+            <HeadingHighlight>Connects</HeadingHighlight> with <br /> your
+            target audience
+          </Heading>
+        </BoxReveal>
       </section>
 
       <section>
@@ -37,7 +42,7 @@ export default function Home() {
           </ul>
         </div>
 
-        <div className="container grid grid-cols-2 gap-[30px] pt-32">
+        <div className="container grid grid-cols-1 gap-[30px] pt-32 lg:grid-cols-2">
           <div>
             <Image
               src="/images/landing/1.webp"
@@ -71,11 +76,9 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <div className="grid grid-cols-2 gap-[30px]">
+        <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
           <div className="flex flex-col gap-10 text-[#231F20]">
-            <h3 className="font-inter text-6xl font-semibold">
-              {landingContent.essence.heading}
-            </h3>
+            <Heading>{landingContent.essence.heading}</Heading>
 
             <p className="font-artbrush text-[32px]">
               {landingContent.essence.question}
@@ -102,11 +105,9 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <div className="font-inter grid grid-cols-2">
+        <div className="font-inter grid grid-cols-1 gap-20 md:gap-0 lg:grid-cols-2">
           <div className="flex max-w-[470px] flex-col gap-10">
-            <h3 className="text-6xl font-semibold">
-              {landingContent.process.heading}
-            </h3>
+            <Heading>{landingContent.process.heading}</Heading>
             <p className="text-2xl">{landingContent.process.description}</p>
 
             <MMLink
@@ -117,19 +118,22 @@ export default function Home() {
           </div>
 
           <div>
-            <ul className="flex gap-[30px]">
+            <ul className="flex flex-col gap-[30px] md:flex-row">
               {landingContent.process.list.map((item, index) => (
-                <li key={item.heading + index}>
-                  <div className="relative inline-block" aria-hidden>
-                    <Icons.cricleListNumber />
-                    <span className="absolute inset-0 z-10 flex items-center justify-center font-artbrush text-lg text-[#EEEEEA]">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                <li key={item.heading + index} className="space-y-4">
+                  <div className="flex flex-row gap-4 md:flex-col md:gap-0">
+                    <div className="relative inline-block" aria-hidden>
+                      <Icons.cricleListNumber />
+                      <span className="absolute inset-0 z-10 flex items-center justify-center font-artbrush text-lg text-[#EEEEEA]">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+
+                    <h4 className="font-artbrush text-[32px] text-[#231F20]">
+                      {item.heading}
+                    </h4>
                   </div>
 
-                  <h4 className="font-artbrush text-[32px] text-[#231F20]">
-                    {item.heading}
-                  </h4>
                   <p className="text-lg text-[#4C495C]">{item.description}</p>
                 </li>
               ))}
@@ -140,10 +144,8 @@ export default function Home() {
 
       <section className="bg-[#E4E4DF]">
         <div className="container py-24">
-          <div className="grid grid-cols-2">
-            <h3 className="text-6xl font-semibold text-[#231F20]">
-              {landingContent.faq.heading}
-            </h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2">
+            <Heading>{landingContent.faq.heading}</Heading>
 
             <div>
               <FaqAccordion />
