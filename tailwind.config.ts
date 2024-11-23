@@ -77,6 +77,29 @@ export default {
       fontFamily: {
         ["general-sans"]: ["var(--font-general-sans)", ...fontFamily.sans],
         ["artbrush"]: ["var(--font-artbrush)", ...fontFamily.sans],
+        ["inter"]: ["var(--font-inter)", ...fontFamily.sans],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

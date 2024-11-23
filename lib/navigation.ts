@@ -1,21 +1,23 @@
+import { commonContent } from "@/content/common"
+
 export const NAV_ITEMS_1 = [
   {
     href: "/",
-    label: "The Process",
+    label: commonContent.navigation.process,
   },
   {
     href: "/",
-    label: "The Results",
+    label: commonContent.navigation.result,
   },
 ]
 export const NAV_ITEMS_2 = [
   {
     href: "/",
-    label: "My Story",
+    label: commonContent.navigation.myStory,
   },
   {
     href: "/",
-    label: "Let's Connect",
+    label: commonContent.navigation.letsConnect,
   },
 ]
 

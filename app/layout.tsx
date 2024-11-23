@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Inter } from "next/font/google"
 import localFont from "next/font/local"
 
 import "@/app/globals.css"
@@ -43,6 +44,8 @@ const artbrush = localFont({
   src: "./fonts/artbrush/artbrush.ttf",
 })
 
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
+
 export const metadata: Metadata = {
   title: "Mende Creative Corner",
   description: "The corner of creativity",
@@ -59,7 +62,8 @@ export default function RootLayout({
         className={cn(
           "min-h-screen bg-background font-general-sans antialiased",
           generalSans.variable,
-          artbrush.variable
+          artbrush.variable,
+          inter.variable
         )}
       >
         {children}

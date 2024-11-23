@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import { NAV_ITEMS_1, NAV_ITEMS_2 } from "@/lib/navigation"
 import { HamburgerIcon } from "@/components/hamburger-menu"
 import { Icons } from "@/components/icons"
@@ -11,7 +13,9 @@ export function Header() {
       </nav>
 
       <div className="lg:translate-y-2">
-        <Icons.logo className="max-lg:h-[30px] max-lg:w-14" />
+        <Link href="/">
+          <Icons.logo className="max-lg:h-[30px] max-lg:w-14" />
+        </Link>
       </div>
 
       <nav className="hidden lg:block">
