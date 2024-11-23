@@ -2,6 +2,7 @@ import Image from "next/image"
 import { landingContent } from "@/content/landing"
 
 import { Heading } from "@/components/ui/heading"
+import { Text } from "@/components/ui/text"
 import { BoxReveal } from "@/components/box-reveal"
 import { ConnectBanner } from "@/components/connect-banner"
 import { FaqAccordion } from "@/components/faq-accordion"
@@ -32,11 +33,8 @@ export default function Home() {
           <ul className="flex justify-between">
             {/* TODO: Inter font */}
             {traits.map((trait) => (
-              <li
-                key={trait}
-                className="font-inter text-xl tracking-wide text-[#4C495C]"
-              >
-                {trait}
+              <li key={trait}>
+                <Text className="tracking-wide lg:text-xl">{trait}</Text>
               </li>
             ))}
           </ul>
@@ -58,10 +56,13 @@ export default function Home() {
               {landingContent.about.heading}
             </h2>
 
-            <div className="font-inter flex flex-col gap-8 text-2xl text-[#4C495C]">
-              <p>{landingContent.about.description}</p>
-              <p>{landingContent.about.description_2}</p>
-              <i className="font-artbrush">{landingContent.about.quote}</i>
+            <div className="font-inter flex flex-col gap-8">
+              <Text>{landingContent.about.description}</Text>
+              <Text>{landingContent.about.description_2}</Text>
+
+              <Text asChild className="font-artbrush">
+                <i>{landingContent.about.quote}</i>
+              </Text>
             </div>
 
             <div className="mt-auto">
@@ -80,13 +81,13 @@ export default function Home() {
           <div className="flex flex-col gap-10 text-[#231F20]">
             <Heading>{landingContent.essence.heading}</Heading>
 
-            <p className="font-artbrush text-[32px]">
+            <Text className="font-artbrush lg:text-[32px]">
               {landingContent.essence.question}
-            </p>
+            </Text>
 
-            <div className="font-inter flex flex-col gap-8 text-2xl text-[#4C495C]">
-              <p>{landingContent.essence.description}</p>
-              <p>{landingContent.essence.description_2}</p>
+            <div className="font-inter flex flex-col gap-8">
+              <Text>{landingContent.essence.description}</Text>
+              <Text>{landingContent.essence.description_2}</Text>
             </div>
           </div>
 
@@ -108,7 +109,8 @@ export default function Home() {
         <div className="font-inter grid grid-cols-1 gap-20 md:gap-0 lg:grid-cols-2">
           <div className="flex max-w-[470px] flex-col gap-10">
             <Heading>{landingContent.process.heading}</Heading>
-            <p className="text-2xl">{landingContent.process.description}</p>
+
+            <Text>{landingContent.process.description}</Text>
 
             <MMLink
               text={landingContent.process.cta.text}
@@ -122,9 +124,10 @@ export default function Home() {
               {landingContent.process.list.map((item, index) => (
                 <li key={item.heading + index} className="space-y-4">
                   <div className="flex flex-row gap-4 md:flex-col md:gap-0">
-                    <div className="relative inline-block" aria-hidden>
+                    <div className="relative" aria-hidden>
                       <Icons.cricleListNumber />
-                      <span className="absolute inset-0 z-10 flex items-center justify-center font-artbrush text-lg text-[#EEEEEA]">
+
+                      <span className="absolute inset-0 left-4 z-10 flex items-center font-artbrush text-lg text-[#EEEEEA]">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -134,7 +137,7 @@ export default function Home() {
                     </h4>
                   </div>
 
-                  <p className="text-lg text-[#4C495C]">{item.description}</p>
+                  <Text className="lg:text-lg">{item.description}</Text>
                 </li>
               ))}
             </ul>
