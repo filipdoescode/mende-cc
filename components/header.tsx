@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 import { NAV_ITEMS_1, NAV_ITEMS_2 } from "@/lib/navigation"
-import { HamburgerIcon } from "@/components/hamburger-menu"
+import { HamburgerMenu } from "@/components/hamburger-menu"
 import { Icons } from "@/components/icons"
 import { NavItems } from "@/components/nav-items"
 
@@ -22,7 +22,7 @@ export function Header() {
         <NavItems items={NAV_ITEMS_2} />
       </nav>
 
-      <HamburgerIcon />
+      <HamburgerMenu />
     </header>
   )
 }
