@@ -14,7 +14,7 @@ export function MMLink({ text, className, ...props }: MMLinkProps) {
   return (
     <Link
       className={cn(
-        "group relative inline-flex flex-col text-[32px] text-secondary",
+        "group relative inline-flex flex-col text-secondary lg:text-[32px]",
         className
       )}
       {...props}

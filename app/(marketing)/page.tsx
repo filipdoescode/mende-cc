@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { landingContent } from "@/content/landing"
 
+import { cn } from "@/lib/utils"
 import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
 import { BoxReveal } from "@/components/box-reveal"
@@ -15,7 +16,7 @@ const traits = ["Visual Identity Designer", "Human Being", "All-round creative"]
 export default function Home() {
   return (
     <div className="space-y-40">
-      <section className="container py-64">
+      <section className="container pb-16 pt-20 lg:py-64">
         <BoxReveal width="100%">
           <Heading as="h1" className="max-[970px] mx-auto p-2 text-center">
             Build a <HeadingHighlight>Brand Presence</HeadingHighlight>
@@ -29,25 +30,30 @@ export default function Home() {
       </section>
 
       <section>
-        <div className="container border-b border-[#959390] pb-[25px]">
-          <ul className="flex justify-between">
+        <div className="container border-[#959390] pb-[25px] lg:border-b">
+          <ul className="flex justify-between border-b border-[#959390] pb-[10px] lg:border-none lg:pb-0">
             {/* TODO: Inter font */}
-            {traits.map((trait) => (
-              <li key={trait}>
+            {traits.map((trait, index) => (
+              <li
+                key={trait + index}
+                className={cn({
+                  "hidden lg:block": index === 0,
+                })}
+              >
                 <Text className="tracking-wide lg:text-xl">{trait}</Text>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="container grid grid-cols-1 gap-[30px] pt-32 lg:grid-cols-2">
+        <div className="container grid grid-cols-1 gap-[30px] pt-[22px] lg:grid-cols-2 lg:pt-32">
           <div>
             <Image
               src="/images/landing/1.webp"
               width={570}
               height={984}
               alt="Mende Mitreski"
-              className="h-[984px] w-auto object-cover"
+              className="h-[238px] w-auto object-cover lg:h-[984px]"
             />
           </div>
 
@@ -56,7 +62,7 @@ export default function Home() {
               {landingContent.about.heading}
             </h2>
 
-            <div className="font-inter flex flex-col gap-8">
+            <div className="flex flex-col gap-8 font-inter">
               <Text>{landingContent.about.description}</Text>
               <Text>{landingContent.about.description_2}</Text>
 
@@ -69,7 +75,7 @@ export default function Home() {
               <MMLink
                 text={landingContent.about.cta.text}
                 href="/"
-                className="text-2xl"
+                className="text-sm lg:text-2xl"
               />
             </div>
           </div>
@@ -85,7 +91,7 @@ export default function Home() {
               {landingContent.essence.question}
             </Text>
 
-            <div className="font-inter flex flex-col gap-8">
+            <div className="flex flex-col gap-8 font-inter">
               <Text>{landingContent.essence.description}</Text>
               <Text>{landingContent.essence.description_2}</Text>
             </div>
@@ -106,7 +112,7 @@ export default function Home() {
       </section>
 
       <section className="container">
-        <div className="font-inter grid grid-cols-1 gap-20 md:gap-0 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-20 font-inter md:gap-0 lg:grid-cols-2">
           <div className="flex max-w-[470px] flex-col gap-10">
             <Heading>{landingContent.process.heading}</Heading>
 

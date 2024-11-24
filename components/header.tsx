@@ -14,7 +14,7 @@ export function Header() {
 
       <div className="lg:translate-y-2">
         <Link href="/">
-          <Icons.logo className="max-lg:h-[30px] max-lg:w-14" />
+          <Icons.logo className="h-full w-full max-lg:h-[19px] max-lg:w-[88px]" />
         </Link>
       </div>
 
@@ -22,7 +22,9 @@ export function Header() {
         <NavItems items={NAV_ITEMS_2} />
       </nav>
 
-      <HamburgerMenu />
+      <div className="relative block lg:hidden">
+        <HamburgerMenu />
+      </div>
     </header>
   )
 }
