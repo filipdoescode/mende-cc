@@ -1,5 +1,7 @@
 import { commonContent } from "@/content/common"
 
+import { ROUTES } from "@/lib/routes"
+
 export const NAV_ITEMS_1 = [
   {
     href: "/",
@@ -12,7 +14,7 @@ export const NAV_ITEMS_1 = [
 ]
 export const NAV_ITEMS_2 = [
   {
-    href: "/",
+    href: ROUTES.myStory,
     label: commonContent.navigation.myStory,
   },
   {
