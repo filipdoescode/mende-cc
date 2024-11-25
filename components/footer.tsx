@@ -5,6 +5,8 @@ import { NAVIGATION } from "@/lib/navigation"
 import { Icons } from "@/components/icons"
 import { MMLink } from "@/components/mm-link"
 
+// TODO: Correct links & navigation
+
 export function Footer() {
   return (
     <footer className="bg-black pb-8 pt-12 text-gray-ea lg:py-16">
@@ -47,10 +49,19 @@ export function Footer() {
               © {new Date().getFullYear()} | Mendflow Ltd.
             </p>
 
-            <ul>
-              <li>Email</li>
-              <li>Linkedin</li>
+            <ul className="flex gap-4 lg:hidden">
+              <li>
+                <Link href="mailto:contact@mendflow.com">
+                  <Icons.email />
+                </Link>
+              </li>
+              <li>
+                <Link href="mailto:contact@mendflow.com">
+                  <Icons.linkedin />
+                </Link>
+              </li>
             </ul>
+
             <Icons.logoWhite className="block lg:hidden" />
           </div>
 
