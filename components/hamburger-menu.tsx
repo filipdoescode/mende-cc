@@ -12,9 +12,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
-import { Icons } from "./icons"
-import { Text } from "./ui/text"
+import { Text } from "@/components/ui/text"
+import { Icons } from "@/components/icons"
 
 export function HamburgerMenu() {
   return (

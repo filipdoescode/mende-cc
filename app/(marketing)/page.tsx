@@ -15,7 +15,7 @@ const traits = ["Visual Identity Designer", "Human Being", "All-round creative"]
 
 export default function Home() {
   return (
-    <div className="space-y-40">
+    <div className="space-y-14 lg:space-y-40">
       <section className="container pb-16 pt-20 lg:py-64">
         <BoxReveal width="100%">
           <Heading as="h1" className="max-[970px] mx-auto p-2 text-center">
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
 
         <div className="container grid grid-cols-1 gap-[30px] pt-[22px] lg:grid-cols-2 lg:pt-32">
-          <div>
+          <div className="flex items-end gap-4">
             <Image
               src="/images/landing/1.webp"
               width={570}
@@ -55,14 +55,19 @@ export default function Home() {
               alt="Mende Mitreski"
               className="h-[238px] w-auto object-cover lg:h-[984px]"
             />
+
+            <Heading className="max-w-[100px] font-inter text-xs font-semibold uppercase tracking-widest lg:hidden lg:text-[20px]">
+              {" "}
+              {landingContent.about.heading}
+            </Heading>
           </div>
 
-          <div className="flex flex-col gap-10">
-            <h2 className="font-inter text-[20px] font-semibold uppercase tracking-widest">
+          <div className="flex flex-col gap-[30px] lg:gap-10">
+            <h2 className="hidden font-inter text-[20px] font-semibold uppercase tracking-widest lg:block">
               {landingContent.about.heading}
             </h2>
 
-            <div className="flex flex-col gap-8 font-inter">
+            <div className="flex flex-col gap-4 font-inter lg:gap-8">
               <Text>{landingContent.about.description}</Text>
               <Text>{landingContent.about.description_2}</Text>
 
@@ -84,27 +89,29 @@ export default function Home() {
 
       <section className="container">
         <div className="grid grid-cols-1 gap-[30px] lg:grid-cols-2">
-          <div className="flex flex-col gap-10 text-[#231F20]">
-            <Heading>{landingContent.essence.heading}</Heading>
+          <div className="flex flex-col gap-[10px] text-[#231F20] lg:gap-10">
+            <Heading className="max-w-[268px] lg:max-w-fit">
+              {landingContent.essence.heading}
+            </Heading>
 
-            <Text className="font-artbrush lg:text-[32px]">
+            <Text className="font-artbrush text-[16px] lg:text-[32px]">
               {landingContent.essence.question}
             </Text>
 
-            <div className="flex flex-col gap-8 font-inter">
+            <div className="flex flex-col gap-4 font-inter lg:gap-8">
               <Text>{landingContent.essence.description}</Text>
               <Text>{landingContent.essence.description_2}</Text>
             </div>
           </div>
 
           <div className="flex flex-col items-center justify-end gap-14">
-            <Icons.circleBrush />
+            <Icons.circleBrush className="size-40 lg:size-auto" />
 
             <div className="pb-2">
               <MMLink
                 href="/"
                 text={landingContent.essence.cta.text}
-                className="text-2xl"
+                className="text-sm lg:text-2xl"
               />
             </div>
           </div>
@@ -113,7 +120,7 @@ export default function Home() {
 
       <section className="container">
         <div className="grid grid-cols-1 gap-20 font-inter md:gap-0 lg:grid-cols-2">
-          <div className="flex max-w-[470px] flex-col gap-10">
+          <div className="flex max-w-[470px] flex-col gap-5 lg:gap-10">
             <Heading>{landingContent.process.heading}</Heading>
 
             <Text>{landingContent.process.description}</Text>
@@ -121,7 +128,7 @@ export default function Home() {
             <MMLink
               text={landingContent.process.cta.text}
               href="/"
-              className="text-2xl"
+              className="hidden text-sm lg:inline-block lg:text-2xl"
             />
           </div>
 
@@ -147,13 +154,19 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+
+            <MMLink
+              text={landingContent.process.cta.text}
+              href="/"
+              className="mt-8 text-sm lg:hidden lg:text-2xl"
+            />
           </div>
         </div>
       </section>
 
       <section className="bg-[#E4E4DF]">
-        <div className="container py-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2">
+        <div className="container py-8 lg:py-24">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-0">
             <Heading>{landingContent.faq.heading}</Heading>
 
             <div>
@@ -163,7 +176,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container pb-40">
+      <section className="container pb-28 lg:pb-40">
         <ConnectBanner />
       </section>
     </div>

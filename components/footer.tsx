@@ -1,27 +1,25 @@
-import Image from "next/image"
 import Link from "next/link"
 import { commonContent } from "@/content/common"
-import MendeCC from "@/public/images/mende-cc.png"
 
 import { NAVIGATION } from "@/lib/navigation"
-
-import { MMLink } from "./mm-link"
+import { Icons } from "@/components/icons"
+import { MMLink } from "@/components/mm-link"
 
 export function Footer() {
   return (
-    <footer className="bg-black py-16 text-gray-ea">
+    <footer className="bg-black pb-8 pt-12 text-gray-ea lg:py-16">
       <div className="container">
         <div className="flex flex-col gap-20">
-          <div className="font-artbrush text-[32px] font-medium text-secondary">
+          <div className="hidden font-artbrush text-[32px] font-medium text-secondary lg:block">
             <h3 className="">Think we&apos;d be a great fit?</h3>
 
             <MMLink text={commonContent.footer.letsConnect} href="/" />
           </div>
 
-          <div className="flex justify-between">
-            <Image src={MendeCC} alt="Mende's creative corner" />
+          <div className="hidden justify-between lg:flex">
+            <Icons.logoWhite />
 
-            <div className="flex gap-2">
+            <div className="flex flex-row gap-2">
               <Link
                 href="mailto:contact@mendflow.com"
                 className="transition-colors hover:text-secondary"
@@ -41,18 +39,28 @@ export function Footer() {
           </div>
         </div>
 
-        <hr className="my-8" />
+        <hr className="my-8 hidden lg:block" />
 
         <div className="flex justify-between">
-          <div>© {new Date().getFullYear()} | Mendflow Ltd.</div>
+          <div className="flex flex-col justify-between py-[10px] lg:block lg:py-0">
+            <p className="hidden lg:block">
+              © {new Date().getFullYear()} | Mendflow Ltd.
+            </p>
+
+            <ul>
+              <li>Email</li>
+              <li>Linkedin</li>
+            </ul>
+            <Icons.logoWhite className="block lg:hidden" />
+          </div>
 
           <nav>
-            <ul className="flex gap-6">
+            <ul className="flex flex-col gap-6 lg:flex-row">
               {NAVIGATION.map((nav, index) => (
                 <Link
                   href={nav.href}
                   key={nav.label + index}
-                  className="transition-colors hover:text-secondary"
+                  className="border-[#DADADA] py-[10px] text-right transition-colors hover:text-secondary lg:border-none lg:py-0 lg:text-left [&:not(:last-child)]:border-b"
                 >
                   {nav.label}
                 </Link>
@@ -60,6 +68,12 @@ export function Footer() {
             </ul>
           </nav>
         </div>
+
+        <hr className="mt-[5px] lg:hidden" />
+
+        <p className="block pt-4 text-center lg:hidden">
+          © {new Date().getFullYear()} | Mendflow Ltd.
+        </p>
       </div>
     </footer>
   )

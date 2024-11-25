@@ -3,5 +3,7 @@ interface HeadingHighlightProps {
 }
 
 export function HeadingHighlight({ children }: HeadingHighlightProps) {
-  return <span className="font-artbrush text-secondary">{children}</span>
+  return (
+    <span className="font-artbrush font-normal text-secondary">{children}</span>
+  )
 }
