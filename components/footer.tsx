@@ -12,10 +12,12 @@ export function Footer() {
     <footer className="bg-black pb-8 pt-12 text-gray-ea lg:py-16">
       <div className="container">
         <div className="flex flex-col gap-20">
-          <div className="hidden font-artbrush text-[32px] font-medium text-secondary lg:block">
+          <div className="hidden font-artbrush text-[32px] font-medium text-[#EEEEEA] lg:block">
             <h3 className="">Think we&apos;d be a great fit?</h3>
 
-            <MMLink text={commonContent.footer.letsConnect} href="/" />
+            <MMLink href="/" variant="tertiary" className="text-[#FFDD93]">
+              {commonContent.footer.letsConnect}
+            </MMLink>
           </div>
 
           <div className="hidden justify-between lg:flex">

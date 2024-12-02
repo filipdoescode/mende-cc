@@ -78,10 +78,12 @@ export default function Home() {
 
             <div className="mt-auto">
               <MMLink
-                text={landingContent.about.cta.text}
                 href="/"
                 className="text-sm lg:text-2xl"
-              />
+                variant="secondary"
+              >
+                {landingContent.about.cta.text}
+              </MMLink>
             </div>
           </div>
         </div>
@@ -110,9 +112,11 @@ export default function Home() {
             <div className="pb-2">
               <MMLink
                 href="/"
-                text={landingContent.essence.cta.text}
                 className="text-sm lg:text-2xl"
-              />
+                variant="secondary"
+              >
+                {landingContent.essence.cta.text}
+              </MMLink>
             </div>
           </div>
         </div>
@@ -125,11 +129,15 @@ export default function Home() {
 
             <Text>{landingContent.process.description}</Text>
 
-            <MMLink
-              text={landingContent.process.cta.text}
-              href="/"
-              className="hidden text-sm lg:inline-block lg:text-2xl"
-            />
+            <div>
+              <MMLink
+                href="/"
+                className="hidden text-sm lg:inline-block lg:text-2xl"
+                variant="secondary"
+              >
+                {landingContent.process.cta.text}
+              </MMLink>
+            </div>
           </div>
 
           <div>
@@ -140,7 +148,7 @@ export default function Home() {
                     <div className="relative" aria-hidden>
                       <Icons.cricleListNumber />
 
-                      <span className="absolute inset-0 left-4 z-10 flex items-center font-artbrush text-lg text-[#EEEEEA]">
+                      <span className="absolute inset-0 left-4 z-10 flex items-center font-artbrush text-lg text-[#231F20]">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                     </div>
@@ -156,10 +164,12 @@ export default function Home() {
             </ul>
 
             <MMLink
-              text={landingContent.process.cta.text}
               href="/"
               className="mt-8 text-sm lg:hidden lg:text-2xl"
-            />
+              variant="secondary"
+            >
+              {landingContent.process.cta.text}
+            </MMLink>
           </div>
         </div>
       </section>

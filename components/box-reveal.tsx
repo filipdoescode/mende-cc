@@ -3,6 +3,8 @@
 import { useEffect, useRef } from "react"
 import { motion, useAnimation, useInView } from "framer-motion"
 
+import { THEME_COLORS } from "@/lib/constants"
+
 interface BoxRevealProps {
   children: JSX.Element
   width?: "fit-content" | "100%"
@@ -61,7 +63,7 @@ export function BoxReveal({
           left: 0,
           right: 0,
           zIndex: 20,
-          background: boxColor ? boxColor : "#a58fff7f",
+          background: boxColor ? boxColor : THEME_COLORS.primary,
         }}
       />
     </div>

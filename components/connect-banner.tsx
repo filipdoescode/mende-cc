@@ -15,7 +15,7 @@ export function ConnectBanner() {
         href="/"
         className={cn(
           buttonVariants(),
-          "rounded-none bg-secondary px-20 py-8 font-artbrush text-2xl text-[#F9FAFB]"
+          "rounded-none bg-secondary px-20 py-8 font-artbrush text-2xl uppercase text-[#F9FAFB]"
         )}
       >
         {commonContent.banner.cta.text}

@@ -1,40 +1,45 @@
-import Image from "next/image"
+import { ReactNode } from "react"
 import Link, { LinkProps } from "next/link"
-import ArrowRight from "@/public/arrow-right.svg"
-import BrushUnderline from "@/public/brush-underline-button.svg"
 
+import { THEME_COLORS } from "@/lib/constants"
 import { cn } from "@/lib/utils"
+import { Icons } from "@/components/icons"
 
 interface MMLinkProps extends LinkProps {
-  text: string
+  variant?: "primary" | "secondary" | "tertiary"
+  children: ReactNode
   className?: string
 }
 
-export function MMLink({ text, className, ...props }: MMLinkProps) {
+export function MMLink({
+  children,
+  className,
+  variant = "primary",
+  ...props
+}: MMLinkProps) {
   return (
     <Link
       className={cn(
-        "group relative inline-flex flex-col text-secondary lg:text-[32px]",
+        "group relative inline-flex flex-col lg:text-[32px]",
+        `text-${variant}`,
         className
       )}
       {...props}
     >
-      <div className="flex gap-6">
-        {text}
+      <div className="flex gap-6 font-artbrush">
+        {children}
 
-        <Image
-          src={ArrowRight}
-          alt="Arrow right"
-          className="transition-transform group-hover:translate-x-2"
-        />
+        <div className="flex items-center justify-center">
+          <Icons.brushArrow
+            variant={THEME_COLORS[variant]}
+            className="transition-transform group-hover:translate-x-2"
+          />
+        </div>
       </div>
 
-      <Image
-        src={BrushUnderline}
-        alt="underline"
-        aria-hidden
-        className="w-full"
-      />
+      <div className="w-full">
+        <Icons.brushUnderline variant={THEME_COLORS[variant]} />
+      </div>
     </Link>
   )
 }
