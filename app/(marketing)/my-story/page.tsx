@@ -24,29 +24,34 @@ const pageNavigation = [
 
 export default function MyStoryPage() {
   return (
-    <div className="space-y-24">
+    <div className="space-y-[50px] lg:space-y-24">
       <section className="container">
         <Heading
           as="h1"
-          className="flex flex-col border-b border-[#959390] pb-10 pt-40 !text-[160px] leading-[1.1]"
+          className="flex flex-col border-b border-[#959390] pb-10 pt-40 text-5xl leading-[1.1] lg:!text-[160px]"
         >
           Let me <br /> properly <br />
-          <HeadingHighlight>Introduce Myself</HeadingHighlight>
+          <HeadingHighlight className="max-lg:text-[50px]">
+            Introduce Myself
+          </HeadingHighlight>
         </Heading>
       </section>
 
       <section className="container space-y-12">
         <nav>
-          <ul className="flex">
+          <ul className="flex max-lg:gap-[10px] max-lg:px-10">
             {pageNavigation.map((item, index) => (
               <li key={item.href + index}>
-                <Link href={item.href} className="flex">
-                  <Text className="!text-xl font-semibold uppercase tracking-widest underline transition-colors hover:text-secondary">
+                <Link href={item.href} className="flex max-lg:gap-[10px]">
+                  <Text className="h-full text-[10px] font-semibold uppercase tracking-widest underline transition-colors hover:text-secondary lg:!text-xl">
                     {item.title}
                   </Text>
 
                   {index !== pageNavigation.length - 1 && (
-                    <span className="px-[10px] text-[#231F20]" aria-hidden>
+                    <span
+                      className="flex items-start text-[#231F20] max-lg:text-[10px] lg:px-[10px]"
+                      aria-hidden
+                    >
                       •
                     </span>
                   )}
@@ -62,10 +67,12 @@ export default function MyStoryPage() {
       </section>
 
       <section id="who-am-i" className="container">
-        <div className="grid grid-cols-2 gap-x-32 gap-y-24">
-          <div>
-            <div>
-              <Heading className="!text-lg text-secondary">WHO AM I</Heading>
+        <div className="grid grid-cols-2 gap-x-32 gap-y-10 lg:gap-y-24">
+          <div className="max-lg:col-span-2">
+            <div className="flex flex-col max-lg:mb-5 max-lg:gap-[10px]">
+              <Heading className="!text-lg uppercase tracking-widest text-secondary">
+                WHO AM I
+              </Heading>
 
               <Text className="font-artbrush text-[#231F20]">
                 Not a designer! Not just a designer, though.
@@ -98,7 +105,7 @@ export default function MyStoryPage() {
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-end max-lg:hidden">
             <Image
               src={Image2}
               alt="Mende"
@@ -108,16 +115,16 @@ export default function MyStoryPage() {
             />
           </div>
 
-          <div>
-            <blockquote className="py-12 text-center font-artbrush text-[26px] text-[#4C495C]">
+          <div className="max-lg:col-span-2">
+            <blockquote className="py-[10px] text-center font-artbrush text-[26px] text-[#4C495C] lg:py-12">
               I prefer to see myself as someone who&apos;s here to simply learn,
               celebrate, and spread my truth, all while inspiring others to
               discover their own.
             </blockquote>
 
-            <hr className="bg-[#959390]" />
+            <hr className="bg-[#959390] max-lg:hidden" />
 
-            <Text className="py-4">
+            <Text className="py-4 max-lg:hidden">
               Get to know me better by checking out the &quot;Fun Facts &
               Stories&quot; section below. It&apos;s filled with interesting
               tidbits and engaging stories that give you a closer look into my
@@ -125,7 +132,7 @@ export default function MyStoryPage() {
             </Text>
           </div>
 
-          <div className="flex flex-col justify-end gap-4 py-4">
+          <div className="flex flex-col justify-end gap-4 py-4 max-lg:col-span-2">
             <Heading
               as="h3"
               className="font-inter text-lg uppercase text-secondary"
@@ -142,47 +149,71 @@ export default function MyStoryPage() {
             </Text>
           </div>
 
-          <div className="col-span-2 mx-auto flex max-w-[770px] flex-col gap-10">
+          <div className="col-span-2 mx-auto flex max-w-[770px] flex-col gap-[30px] lg:gap-10">
             <div>
               <Image src={Image3} alt="Mende Mitreski" />
             </div>
 
-            <Heading as="h4" className="font-inter text-xl uppercase">
+            <Heading
+              as="h4"
+              className="font-inter text-xl uppercase tracking-widest"
+            >
               fun facts & stories about me
             </Heading>
 
             <Text>
-              <span className="font-artbrush">&quot;</span> I&apos;ve got a
-              thing for Eastern Teachings like Zen Buddhism, Taoism, and Yoga
-              Philosophy—they just resonate with me. Stoicism is also in the
-              mix. It&apos;s funny, though, that not everyone seems to get why
-              I&apos;m into it. However, I&apos;m just here embracing what feels
-              right and hoping to keep the good vibes flowing for everyone.
-              <span className="font-artbrush">&quot;</span>
+              <span className="textlg font-artbrush lg:text-4xl">&quot;</span>{" "}
+              I&apos;ve got a thing for Eastern Teachings like Zen Buddhism,
+              Taoism, and Yoga Philosophy—they just resonate with me. Stoicism
+              is also in the mix. It&apos;s funny, though, that not everyone
+              seems to get why I&apos;m into it. However, I&apos;m just here
+              embracing what feels right and hoping to keep the good vibes
+              flowing for everyone.
+              <span className="textlg font-artbrush lg:text-4xl">&quot;</span>
             </Text>
 
             <div>
-              <MMLink href="/">Tell me another story</MMLink>
+              <MMLink href="/" arrowClassName="max-lg:hidden">
+                Tell me another story
+              </MMLink>
+            </div>
+
+            <div className="flex gap-4 lg:hidden">
+              <Image
+                src={Image2}
+                alt="Mende"
+                width={156}
+                height={256}
+                className="h-auto w-full"
+              />
+
+              <Image
+                src={Image4}
+                alt="Mende"
+                width={156}
+                height={256}
+                className="h-auto w-full"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section id="design-journey-expertise" className="container">
-        <div className="grid grid-cols-2 gap-x-32 gap-y-40">
-          <div>
-            <div>
-              <Heading className="!text-lg text-secondary">
+        <div className="grid grid-cols-2 gap-x-32 gap-y-[10px] lg:gap-y-40">
+          <div className="max-lg:col-span-2">
+            <div className="space-y-[30px]">
+              <Heading className="!text-lg uppercase tracking-widest text-secondary">
                 Design Journey & Expertise
               </Heading>
 
-              <Text className="font-artbrush text-[#231F20]">
+              <Text className="font-artbrush !text-[32px] text-primary">
                 I help businesses grow - increase incomes, emotionally connect
                 with their customers, and expand brand recognition and trust.
               </Text>
             </div>
 
-            <div className="flex flex-col gap-8">
+            <div className="mt-[60px] flex flex-col gap-8">
               <Text>
                 I have now been in the graphic design world for almost a decade,
                 working with both big companies and awesome individuals.
@@ -208,21 +239,23 @@ export default function MyStoryPage() {
             </div>
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex justify-end max-lg:hidden">
             <Image
               src={Image4}
               alt="Mende"
               width={470}
               height={715}
-              className="h-full max-h-[715px] w-auto"
+              className="mt-auto h-full max-h-[715px] w-auto"
             />
           </div>
 
-          <Heading>Why Mendflow?</Heading>
+          <Heading className="max-lg:col-span-2 max-lg:mt-[50px]">
+            Why Mendflow?
+          </Heading>
 
-          <div className="flex flex-col gap-10">
-            <Text className="font-artbrush !text-[32px] text-[#231F20]">
-              Curious about the story <br />
+          <div className="col-sp flex flex-col gap-10 max-lg:col-span-2">
+            <Text className="font-artbrush !text-base text-[#231F20] lg:!text-[32px]">
+              Curious about the story <br className="max-lg:hidden" />
               behind the name and design?
             </Text>
 

@@ -4,7 +4,7 @@ import { ROUTES } from "@/lib/routes"
 
 export const NAV_ITEMS_1 = [
   {
-    href: "/",
+    href: ROUTES.theProcess,
     label: commonContent.navigation.process,
   },
   {

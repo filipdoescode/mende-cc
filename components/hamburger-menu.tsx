@@ -43,11 +43,13 @@ export function HamburgerMenu() {
                 key={item.label + index}
                 className="group w-full border-b border-[#DADADA] py-7 text-center transition-colors hover:border-secondary"
               >
-                <Link href={item.href}>
-                  <Text className="text-2xl text-[#EEEEEA] transition-colors group-hover:text-secondary">
-                    {item.label}
-                  </Text>
-                </Link>
+                <SheetTrigger asChild>
+                  <Link href={item.href}>
+                    <Text className="text-2xl text-[#EEEEEA] transition-colors group-hover:text-secondary">
+                      {item.label}
+                    </Text>
+                  </Link>
+                </SheetTrigger>
               </li>
             ))}
           </ul>

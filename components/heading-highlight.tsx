@@ -1,9 +1,17 @@
+import { cn } from "@/lib/utils"
+
 interface HeadingHighlightProps {
   children: string
+  className?: string
 }
 
-export function HeadingHighlight({ children }: HeadingHighlightProps) {
+export function HeadingHighlight({
+  children,
+  className,
+}: HeadingHighlightProps) {
   return (
-    <span className="font-artbrush font-normal text-secondary">{children}</span>
+    <span className={cn("font-artbrush font-normal text-secondary", className)}>
+      {children}
+    </span>
   )
 }

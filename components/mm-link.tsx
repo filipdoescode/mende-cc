@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { HTMLAttributes, ReactNode } from "react"
 import Link, { LinkProps } from "next/link"
 
 import { THEME_COLORS } from "@/lib/constants"
@@ -7,14 +7,16 @@ import { Icons } from "@/components/icons"
 
 interface MMLinkProps extends LinkProps {
   variant?: "primary" | "secondary" | "tertiary"
+  className?: HTMLAttributes<HTMLAnchorElement>["className"]
+  arrowClassName?: HTMLAttributes<HTMLDialogElement>["className"]
   children: ReactNode
-  className?: string
 }
 
 export function MMLink({
   children,
   className,
   variant = "primary",
+  arrowClassName,
   ...props
 }: MMLinkProps) {
   return (
@@ -29,7 +31,7 @@ export function MMLink({
       <div className="flex gap-6 font-artbrush">
         {children}
 
-        <div className="flex items-center justify-center">
+        <div className={cn("flex items-center justify-center", arrowClassName)}>
           <Icons.brushArrow
             variant={THEME_COLORS[variant]}
             className="transition-transform group-hover:translate-x-2"
