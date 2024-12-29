@@ -8,7 +8,7 @@ export const NAV_ITEMS_1 = [
     label: commonContent.navigation.process,
   },
   {
-    href: "/",
+    href: ROUTES.theResults,
     label: commonContent.navigation.result,
   },
 ]

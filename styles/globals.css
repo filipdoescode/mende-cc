@@ -45,3 +45,7 @@
       "calt" 1;
   }
 }
+
+.artbrush-marker li::marker {
+  @apply font-artbrush text-[32px] text-[#4C495C];
+}

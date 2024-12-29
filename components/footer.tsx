@@ -15,7 +15,7 @@ export function Footer() {
           <div className="hidden font-artbrush text-[32px] font-medium text-[#EEEEEA] lg:block">
             <h3 className="">Think we&apos;d be a great fit?</h3>
 
-            <MMLink href="/" variant="tertiary" className="text-[#FFDD93]">
+            <MMLink href="/" variant="tertiary">
               {commonContent.footer.letsConnect}
             </MMLink>
           </div>

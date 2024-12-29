@@ -28,7 +28,7 @@ export function MMLink({
       )}
       {...props}
     >
-      <div className="flex gap-6 font-artbrush">
+      <div className={cn("flex gap-6 font-artbrush")}>
         {children}
 
         <div className={cn("flex items-center justify-center", arrowClassName)}>
