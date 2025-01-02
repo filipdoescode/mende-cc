@@ -4,8 +4,8 @@ import { marqueeLogos } from "@/lib/logos"
 import { Heading } from "@/components/ui/heading"
 import Marquee from "@/components/ui/marquee"
 import { Text } from "@/components/ui/text"
-import { HeadingHighlight } from "@/components/heading-highlight"
 import { MMLink } from "@/components/mm-link"
+import { TextHighlight } from "@/components/text-highlight"
 
 export default function TheProcessPage() {
   return (
@@ -17,9 +17,9 @@ export default function TheProcessPage() {
             className="flex flex-col border-b border-[#959390] pb-10 pt-40 text-5xl leading-[1.1] lg:!text-[160px]"
           >
             The <br />
-            <HeadingHighlight className="max-lg:text-[50px]">
+            <TextHighlight variant="secondary" className="max-lg:text-[50px]">
               Results
-            </HeadingHighlight>
+            </TextHighlight>
           </Heading>
         </div>
 

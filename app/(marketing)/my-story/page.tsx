@@ -8,8 +8,8 @@ import Image4 from "@/public/images/my-story/4.webp"
 import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
 import { ConnectBanner } from "@/components/connect-banner"
-import { HeadingHighlight } from "@/components/heading-highlight"
 import { MMLink } from "@/components/mm-link"
+import { TextHighlight } from "@/components/text-highlight"
 
 const pageNavigation = [
   {
@@ -31,9 +31,9 @@ export default function MyStoryPage() {
           className="flex flex-col border-b border-[#959390] pb-10 pt-40 text-5xl leading-[1.1] lg:!text-[160px]"
         >
           Let me <br /> properly <br />
-          <HeadingHighlight className="max-lg:text-[50px]">
+          <TextHighlight variant="secondary" className="max-lg:text-[50px]">
             Introduce Myself
-          </HeadingHighlight>
+          </TextHighlight>
         </Heading>
       </section>
 

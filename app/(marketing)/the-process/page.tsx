@@ -2,8 +2,8 @@ import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
 import { ConnectBanner } from "@/components/connect-banner"
 import { DesignProcessTable } from "@/components/design-proces-table"
-import { HeadingHighlight } from "@/components/heading-highlight"
 import { MMLink } from "@/components/mm-link"
+import { TextHighlight } from "@/components/text-highlight"
 
 const todos_1 = [
   {
@@ -50,9 +50,9 @@ export default function TheProcessPage() {
           className="flex flex-col border-b border-[#959390] pb-10 pt-40 text-5xl leading-[1.1] lg:!text-[160px]"
         >
           Guiding <br /> through the <br />
-          <HeadingHighlight className="max-lg:text-[50px]">
+          <TextHighlight variant="secondary" className="max-lg:text-[50px]">
             Design Process
-          </HeadingHighlight>
+          </TextHighlight>
         </Heading>
 
         <Text className="max-w-[870px] py-24">

@@ -7,9 +7,9 @@ import { Text } from "@/components/ui/text"
 import { BoxReveal } from "@/components/box-reveal"
 import { ConnectBanner } from "@/components/connect-banner"
 import { FaqAccordion } from "@/components/faq-accordion"
-import { HeadingHighlight } from "@/components/heading-highlight"
 import { Icons } from "@/components/icons"
 import { MMLink } from "@/components/mm-link"
+import { TextHighlight } from "@/components/text-highlight"
 
 const traits = ["Visual Identity Designer", "Human Being", "All-round creative"]
 
@@ -19,12 +19,15 @@ export default function Home() {
       <section className="container pb-16 pt-20 lg:py-64">
         <BoxReveal width="100%">
           <Heading as="h1" className="max-[970px] mx-auto p-2 text-center">
-            Build a <HeadingHighlight>Brand Presence</HeadingHighlight>
+            Build a{" "}
+            <TextHighlight variant="secondary">Brand Presence</TextHighlight>
             &nbsp;that
             <br />
-            <HeadingHighlight>Represents You</HeadingHighlight> and{" "}
-            <HeadingHighlight>Connects</HeadingHighlight> with <br /> your
-            target audience
+            <TextHighlight variant="secondary">
+              Represents You
+            </TextHighlight>{" "}
+            and <TextHighlight variant="secondary">Connects</TextHighlight> with{" "}
+            <br /> your target audience
           </Heading>
         </BoxReveal>
       </section>

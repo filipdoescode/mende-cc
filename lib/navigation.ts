@@ -18,7 +18,7 @@ export const NAV_ITEMS_2 = [
     label: commonContent.navigation.myStory,
   },
   {
-    href: "/",
+    href: ROUTES.contact,
     label: commonContent.navigation.letsConnect,
   },
 ]
