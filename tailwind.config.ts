@@ -78,6 +78,9 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundImage: {
+        colorOverlap: "linear-gradient(to top, #F4A382 500px",
+      },
       boxShadow: {
         thumb: "0px 0px 5px 0.5px #00000026",
       },
