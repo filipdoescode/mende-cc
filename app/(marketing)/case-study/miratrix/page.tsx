@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 
 import { ROUTES } from "@/lib/routes"
@@ -34,6 +35,10 @@ const miratrixPalette = [
     cmy: "2/1/3/0",
   },
 ]
+
+export const metadata: Metadata = {
+  title: "Miratrix",
+}
 
 export default function ContactPage() {
   return (

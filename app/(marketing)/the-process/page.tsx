@@ -1,3 +1,5 @@
+import { Metadata } from "next"
+
 import { ROUTES } from "@/lib/routes"
 import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
@@ -41,6 +43,10 @@ const todos_2 = [
       "Presenting the final product involves showcasing the design concept in real-world scenarios relevant to your needs. Typically, I deliver the results through a PDF presentation, which includes the designs, along with explanations of the design process and its meaning.",
   },
 ]
+
+export const metadata: Metadata = {
+  title: "The Process",
+}
 
 export default function TheProcessPage() {
   return (

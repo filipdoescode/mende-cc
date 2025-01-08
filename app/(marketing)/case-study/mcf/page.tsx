@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 
 import { Heading } from "@/components/ui/heading"
@@ -7,6 +8,10 @@ import { Logos } from "@/components/logos"
 import { MMLink } from "@/components/mm-link"
 import { PalettePreview } from "@/components/palette-preview"
 import { TextHighlight } from "@/components/text-highlight"
+
+export const metadata: Metadata = {
+  title: "Marasco Charitable Foundation",
+}
 
 export default function ContactPage() {
   return (

@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 
 import { marqueeLogos } from "@/lib/logos"
@@ -7,6 +8,10 @@ import Marquee from "@/components/ui/marquee"
 import { Text } from "@/components/ui/text"
 import { MMLink } from "@/components/mm-link"
 import { TextHighlight } from "@/components/text-highlight"
+
+export const metadata: Metadata = {
+  title: "The Results",
+}
 
 export default function TheProcessPage() {
   return (

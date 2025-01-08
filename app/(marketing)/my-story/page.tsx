@@ -1,3 +1,4 @@
+import { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
 import Image1 from "@/public/images/my-story/1.webp"
@@ -21,6 +22,10 @@ const pageNavigation = [
     href: "#design-journey-expertise",
   },
 ]
+
+export const metadata: Metadata = {
+  title: "My Story",
+}
 
 export default function MyStoryPage() {
   return (

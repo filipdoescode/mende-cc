@@ -54,7 +54,10 @@ const axiforma = localFont({
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
-  title: "Mende Creative Corner",
+  title: {
+    template: "%s | Mende Creative Corner",
+    default: "Mende Creative Corner",
+  },
   description: "The corner of creativity",
 }
 
