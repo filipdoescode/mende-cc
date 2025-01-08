@@ -195,7 +195,7 @@ export function ContactForm() {
                     className="group relative inline-flex cursor-pointer flex-col font-artbrush text-2xl text-[#57967B]"
                   >
                     <div className={cn("flex gap-4 font-artbrush")}>
-                      Previous
+                      Next
                       <div className="flex items-center justify-center">
                         <Icons.brushArrow
                           variant="#57967B"

@@ -45,6 +45,12 @@ const artbrush = localFont({
   src: "./fonts/artbrush/artbrush.ttf",
 })
 
+const axiforma = localFont({
+  variable: "--font-axiforma",
+  weight: "600",
+  src: "./fonts/axiforma/Axiforma-SemiBold.woff",
+})
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 
 export const metadata: Metadata = {
@@ -64,6 +70,7 @@ export default function RootLayout({
           "min-h-screen bg-background font-general-sans antialiased",
           generalSans.variable,
           artbrush.variable,
+          axiforma.variable,
           inter.variable
         )}
       >

@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import { marqueeLogos } from "@/lib/logos"
+import { ROUTES } from "@/lib/routes"
 import { Heading } from "@/components/ui/heading"
 import Marquee from "@/components/ui/marquee"
 import { Text } from "@/components/ui/text"
@@ -60,7 +61,11 @@ export default function TheProcessPage() {
                 </Text>
 
                 <div>
-                  <MMLink href="/" variant="secondary" className="!text-2xl">
+                  <MMLink
+                    href={ROUTES.caseStudy.submitJuice}
+                    variant="secondary"
+                    className="!text-2xl"
+                  >
                     View Case Study
                   </MMLink>
                 </div>
@@ -83,7 +88,11 @@ export default function TheProcessPage() {
               </Text>
 
               <div>
-                <MMLink href="/" variant="secondary" className="!text-2xl">
+                <MMLink
+                  href={ROUTES.caseStudy.mcf}
+                  variant="secondary"
+                  className="!text-2xl"
+                >
                   View Case Study
                 </MMLink>
               </div>
@@ -126,7 +135,11 @@ export default function TheProcessPage() {
               </Text>
 
               <div>
-                <MMLink href="/" variant="secondary" className="!text-2xl">
+                <MMLink
+                  href={ROUTES.caseStudy.miratrix}
+                  variant="secondary"
+                  className="!text-2xl"
+                >
                   View Case Study
                 </MMLink>
               </div>
@@ -135,7 +148,7 @@ export default function TheProcessPage() {
         </div>
       </section>
 
-      <section>
+      <section id="additional-designs">
         <div className="container">
           <Heading>Additional Designs</Heading>
         </div>

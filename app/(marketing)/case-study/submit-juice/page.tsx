@@ -73,7 +73,7 @@ export default function ContactPage() {
               <Text>
                 We had a clear objective: to recreate the logo in a way that
                 encapsulates their{" "}
-                <TextHighlight>innovative approach</TextHighlight> to
+                <TextHighlight>innovative approach</TextHighlight> to{" "}
                 <TextHighlight>SEO</TextHighlight> while maintaining a friendly
                 and approachable vibe. The goal was to design a logo that stands
                 out in a competitive market and subtly{" "}
@@ -90,7 +90,12 @@ export default function ContactPage() {
             </div>
 
             <div className="flex justify-center">
-              <Icons.mcfLogoFull />
+              <Image
+                src="/images/submit-juice/logo-redesign.svg"
+                width={570}
+                height={441}
+                alt="Logo redesign"
+              />
             </div>
 
             <div className="space-y-10">
@@ -103,29 +108,31 @@ export default function ContactPage() {
 
               <div className="grid grid-cols-2 gap-8">
                 <Text>
-                  Our goal was to create something minimalist, yet powerful. So,
-                  we worked on incorporating the initials in a way that felt
-                  simplistic and memorable.
+                  From the outset, our goal was to create something that felt
+                  clean and professional while still maintaining a{" "}
+                  <TextHighlight>friendly touch</TextHighlight> — much like the{" "}
+                  <TextHighlight>essence</TextHighlight> of Submit Juice itself.
+                  The design process started with exploring various concepts
+                  that would incorporate elements related to SEO, but in a
+                  fresh, unique and innovative way. Throughout the process, I
+                  experimented with{" "}
+                  <TextHighlight>negative space</TextHighlight>, a technique we
+                  believe can add subtle layers of meaning to a design.
                 </Text>
                 <Text>
-                  If you look closely, the design also forms a subtle heart
-                  shape—bringing an extra layer of meaning that really aligns
-                  with the MCF mission of love and care.
-                </Text>
-
-                <Text>
-                  The icon tells the story visually—it features a child with
-                  open arms, symbolizing warmth and connection, ready to embrace
-                  the adult figure. The circular shape represents the child’s
-                  head, and the rounded rectangle forms their raised arm.
-                </Text>
-
-                <Text>
-                  In the end, the design didn’t just check all the boxes—it
-                  resonated with Tony, Lacce, and their whole team. It’s a logo
-                  that truly reflects the spirit of Marasco Charitable
-                  Foundation and the important work they’re doing to help
-                  children thrive.
+                  To add some flair, we gave the letter{" "}
+                  <TextHighlight>&apos;b&apos;</TextHighlight> a fun twist by
+                  incorporating small circles resembling{" "}
+                  <TextHighlight>juice drops</TextHighlight> and an abstract{" "}
+                  <TextHighlight>backlinks chain</TextHighlight>, which ties
+                  into the brand name and adds a playful element to the design.
+                  By using negative space, the symbol is crafted that subtly
+                  hints at a <TextHighlight>magnifying glass</TextHighlight>—an
+                  allusion to the search and <TextHighlight>SEO</TextHighlight>{" "}
+                  aspect of the brand. Also the complete icon was crafted using
+                  elements from the letters, making the design{" "}
+                  <TextHighlight>consistent</TextHighlight> and{" "}
+                  <TextHighlight>unique</TextHighlight>.
                 </Text>
               </div>
             </div>
@@ -134,9 +141,9 @@ export default function ContactPage() {
 
         <div className="py-24">
           <Image
-            src="/images/mcf/01.webp"
-            width={1167}
-            height={615}
+            src="/images/submit-juice/02.webp"
+            width={1170}
+            height={765}
             alt="image"
             className="mx-auto w-full"
           />
@@ -153,164 +160,199 @@ export default function ContactPage() {
             <PalettePreview
               logo={<Icons.mcfLogoWhite />}
               primary={{
-                name: "MCF Blue",
-                cmyk: "94/78/49/53",
-                rgb: "19/39/61",
-                hex: "#11273d",
+                name: "SJ Black",
+                cmyk: "70/63/62/59",
+                rgb: "40/40/39",
+                hex: "#282827",
               }}
               secondary={{
-                name: "MCF Orange",
-                cmyk: "1/43/47/0",
-                rgb: "244/163/130",
-                hex: "#f4a382",
+                name: "SJ Yellow",
+                cmyk: "10/23/81/0",
+                rgb: "231/190/79",
+                hex: "#e7be4f",
               }}
               background={{
-                name: "MCF Black",
-                cmyk: "73/67/65/78",
-                rgb: "26/26/26",
-                hex: "#1a1a1a",
+                name: "SJ Purple",
+                cmyk: "65/87/0/0",
+                rgb: "116/69/155",
+                hex: "#74459b",
               }}
               foreground={{
-                name: "MCF White",
-                cmyk: "3/2/4/0",
-                rgb: "245/245/240",
-                hex: "#f5f5f0",
+                name: "SJ White",
+                cmyk: "5/6/5/0",
+                rgb: "239/234/232",
+                hex: "#e7eae8",
               }}
             />
 
             <Text className="font-artbrush !text-xl">
-              Welcoming colors with a purpose
+              Fresh colors for a new experience
             </Text>
           </div>
 
           {/* TODO: Make tidy and re-usable */}
           <div className="space-y-2">
-            <div className="container flex h-full max-h-[500px] flex-col justify-between space-y-6 bg-[#242223] text-center">
-              <div className="flex h-full max-h-[250px] flex-col gap-12 border-b border-[#959390] p-6">
-                <Text className="font-artbrush text-sm text-[#DADADA]">
-                  Berlin Sans FB & Blogger Sans - Logo fonts
-                </Text>
-                <div className="flex justify-center">
-                  <Logos.mcfText />
+            <div className="container flex h-full max-h-[500px] flex-col justify-between space-y-6 bg-[#F5F5F0] text-center shadow-card">
+              <div className="flex h-full max-h-[250px] flex-col border-b border-[#959390] p-6">
+                <Text className="font-artbrush text-sm">Axiforma</Text>
+                <div className="mt-auto flex justify-center font-axiforma !text-[60px] font-semibold leading-none">
+                  submit <br /> juice
                 </div>
               </div>
 
-              <div className="h-full space-y-[55px]">
-                <Text className="font-artbrush text-sm text-[#DADADA]">
+              <div className="h-full pb-12">
+                <Text className="font-artbrush text-sm">
                   POI Carbonic - Different Usage Font
                 </Text>
 
-                <Text className="text-[#DADADA]">
-                  Marasco Charitable Foundation
-                </Text>
+                <div className="mt-10 flex justify-center">
+                  <Logos.submitJuiceText />
+                </div>
               </div>
             </div>
 
             <Text className="font-artbrush !text-xl">
-              Font combination for a heartfelt cause
+              Custom-retouched font for a unique vibe
             </Text>
           </div>
         </div>
       </section>
 
       <section className="container mb-24 mt-48">
-        <Heading className="mb-36">The Logo in Action</Heading>
+        <Heading className="mb-36 max-w-[650px]">
+          Presence on <TextHighlight>screen, merch, print,</TextHighlight> and
+          <TextHighlight> anything</TextHighlight> in between.
+        </Heading>
 
         {/* Logos */}
         <div className="space-y-24">
           <Image
-            src="/images/mcf/02.webp"
-            width={1170}
-            height={687}
+            src="/images/submit-juice/02.webp"
+            width={1329}
+            height={885}
             alt="image"
             className="mx-auto w-full"
           />
 
-          <div className="relative flex justify-end">
-            <Image
-              src="/images/mcf/03.png"
-              width={856}
-              height={739}
-              alt="image"
-              className="absolute -left-20 top-4 mx-auto w-full max-w-[856px]"
-            />
+          <Image
+            src="/images/submit-juice/03.webp"
+            width={1170}
+            height={781}
+            alt="image"
+            className="mx-auto"
+          />
 
-            <Image
-              src="/images/mcf/04.webp"
-              width={778}
-              height={627}
-              alt="image"
-              className="w-full max-w-[778px]"
-            />
+          <div>
+            <div className="container">
+              <Text className="py-9">
+                Creating web <br /> a{" "}
+                <TextHighlight>memorable experience.</TextHighlight>
+              </Text>
+            </div>
+
+            <div className="relative mb-[320px]">
+              <Image
+                src="/images/submit-juice/04.webp"
+                width={1005}
+                height={670}
+                alt="image"
+                className="w-full max-w-[1005px]"
+              />
+
+              <Image
+                src="/images/submit-juice/05.png"
+                width={711}
+                height={679}
+                alt="image"
+                className="absolute -bottom-60 -right-60 w-full max-w-[711px]"
+              />
+              <Image
+                src="/images/submit-juice/06.png"
+                width={760}
+                height={507}
+                alt="image"
+                className="absolute -bottom-80 left-40 max-h-[507px] w-auto max-w-[760px]"
+              />
+            </div>
           </div>
 
-          <div className="flex gap-[30px]">
+          <div className="space-y-20 pt-40">
+            <div className="flex justify-end">
+              <Text className="max-w-[769px]">
+                Upon request of the client, to add a bit more punch to the
+                brand’s identity, we created a secondary icon that highlights
+                the juice element. This version brings the playful aspect of the
+                brand to the forefront, making the connection to the name more
+                obvious while still keeping the design clean and professional.
+              </Text>
+            </div>
             <Image
-              src="/images/mcf/05.webp"
-              width={770}
-              height={513}
+              src="/images/submit-juice/hero.webp"
+              width={670}
+              height={376}
               alt="image"
-              className="w-full max-w-[770px]"
-            />
-
-            <Text className="py-16">
-              With print materials like badges and apparel, the design spreads
-              kindness while staying true to the foundation’s heartfelt mission.
-            </Text>
-          </div>
-
-          <div className="!-mt-20 pb-20">
-            <Image
-              src="/images/mcf/06.png"
-              width={916}
-              height={749}
-              alt="image"
-              className="ml-auto w-full max-w-[916px]"
+              className="w-full max-w-[670px]"
             />
           </div>
 
           <Image
-            src="/images/mcf/07.webp"
-            width={1167}
-            height={769}
+            src="/images/submit-juice/07.webp"
+            width={1170}
+            height={781}
             alt="image"
-            className="ml-auto w-full"
+            className="w-full"
           />
 
-          <div className="flex gap-24">
-            <Image
-              src="/images/mcf/08.webp"
-              width={785}
-              height={940}
-              alt="image"
-              className="w-full max-w-[785px]"
-            />
-
-            <div className="flex flex-col justify-between">
-              <Text>
-                Spreading positivity on a larger scale, designed to inspire, the
-                posters and wall art extend the foundation’s mission, creating
-                powerful visuals that resonate with everyone who sees them.
+          <div className="flex flex-col items-center justify-center space-y-24 pt-20">
+            <div className="container w-full">
+              <Text className="max-w-[769px]">
+                Showcasing the brand&apos;s personality, the design extends to
+                apparel and merch, blending style with subtlety. The clean lines
+                and playful elements translated nicely, creating pieces that are
+                eye-catching and effortlessly cool.
               </Text>
+            </div>
 
-              {/* TODO: Badge */}
+            <div className="relative">
+              <Image
+                src="/images/submit-juice/08.webp"
+                width={1309}
+                height={758}
+                alt="image"
+                className="w-full max-w-[1309px]"
+              />
+              <Image
+                src="/images/submit-juice/09.png"
+                width={267}
+                height={263}
+                alt="image"
+                className="absolute -bottom-56 right-56 z-10 w-full max-w-[267px]"
+              />
+              <Image
+                src="/images/submit-juice/10.png"
+                width={285}
+                height={288}
+                alt="image"
+                className="absolute -bottom-40 right-20 w-full max-w-[285px]"
+              />
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center space-y-[50px]">
+          <div className="container space-y-[70px] pt-20">
             <Image
-              src="/images/mcf/09.webp"
-              width={769}
-              height={506}
+              src="/images/submit-juice/11.webp"
+              width={552}
+              height={336}
               alt="image"
-              className="w-full max-w-[769px]"
+              className="w-full max-w-[552px]"
             />
+
             <Image
-              src="/images/mcf/10.webp"
+              src="/images/submit-juice/12.webp"
               width={970}
-              height={647}
+              height={556}
               alt="image"
-              className="w-full max-w-[970]"
+              className="w-full max-w-[970px]"
             />
           </div>
         </div>
@@ -318,20 +360,15 @@ export default function ContactPage() {
         <div className="mt-[200px]">
           <div className="space-y-[60px]">
             <Text className="!text-5xl">
-              <span className="font-artbrush">&quot;</span>Over the moon, he is
-              fantastic designer. The logo is exactly what we need. I can not be{" "}
-              <TextHighlight variant="secondary">happier</TextHighlight>. Very{" "}
-              <TextHighlight variant="secondary">talented</TextHighlight>,{" "}
-              <TextHighlight variant="secondary">fast</TextHighlight> and{" "}
-              <TextHighlight variant="secondary">professional</TextHighlight>,
-              what else can you ask for. Mende is amazing, I will use him over
-              and over. <br />
-              You won&apos;t find better.
-              <span className="font-artbrush">&quot;</span>
+              &quot;Mende is an{" "}
+              <TextHighlight variant="secondary">amazing</TextHighlight>{" "}
+              designer! If you want{" "}
+              <TextHighlight variant="secondary">the best</TextHighlight>, go to
+              him!&quot;
             </Text>
 
             <div>
-              <Text className="font-artbrush !text-4xl">Tony Marasco</Text>
+              <Text className="font-artbrush !text-4xl">Hunter Strozier</Text>
               <Text className="!text-4xl">Founder</Text>
             </div>
           </div>

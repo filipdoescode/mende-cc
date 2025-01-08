@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { commonContent } from "@/content/common"
 
+import { ROUTES } from "@/lib/routes"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
@@ -12,7 +13,7 @@ export function ConnectBanner() {
       </h2>
 
       <Link
-        href="/"
+        href={ROUTES.contact}
         className={cn(
           buttonVariants(),
           "rounded-none bg-secondary px-20 py-8 font-artbrush text-2xl uppercase text-[#F9FAFB] hover:bg-secondary/90"

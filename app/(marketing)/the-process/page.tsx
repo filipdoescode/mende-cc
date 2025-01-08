@@ -1,3 +1,4 @@
+import { ROUTES } from "@/lib/routes"
 import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
 import { ConnectBanner } from "@/components/connect-banner"
@@ -238,7 +239,11 @@ export default function TheProcessPage() {
               </Text>
 
               <div>
-                <MMLink href="/" variant="tertiary" className="!text-[24px]">
+                <MMLink
+                  href={ROUTES.theProcess}
+                  variant="tertiary"
+                  className="!text-[24px]"
+                >
                   Learn more about it
                 </MMLink>
               </div>

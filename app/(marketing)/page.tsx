@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { landingContent } from "@/content/landing"
 
+import { ROUTES } from "@/lib/routes"
 import { cn } from "@/lib/utils"
 import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
@@ -81,7 +82,7 @@ export default function Home() {
 
             <div className="mt-auto">
               <MMLink
-                href="/"
+                href={ROUTES.myStory}
                 className="text-sm lg:text-2xl"
                 variant="secondary"
               >
@@ -114,7 +115,7 @@ export default function Home() {
 
             <div className="pb-2">
               <MMLink
-                href="/"
+                href={ROUTES.theResults}
                 className="text-sm lg:text-2xl"
                 variant="secondary"
               >
@@ -134,7 +135,7 @@ export default function Home() {
 
             <div>
               <MMLink
-                href="/"
+                href={ROUTES.theProcess}
                 className="hidden text-sm lg:inline-block lg:text-2xl"
                 variant="secondary"
               >

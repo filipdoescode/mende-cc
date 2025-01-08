@@ -87,6 +87,7 @@ export default {
       fontFamily: {
         ["general-sans"]: ["var(--font-general-sans)", ...fontFamily.sans],
         ["artbrush"]: ["var(--font-artbrush)", ...fontFamily.sans],
+        ["axiforma"]: ["var(--font-axiforma)", ...fontFamily.sans],
         ["inter"]: ["var(--font-inter)", ...fontFamily.sans],
       },
       keyframes: {

@@ -173,6 +173,7 @@ export default function MyStoryPage() {
             </Text>
 
             <div>
+              {/* TODO: Correct link */}
               <MMLink href="/" arrowClassName="max-lg:hidden">
                 Tell me another story
               </MMLink>
@@ -266,6 +267,7 @@ export default function MyStoryPage() {
             </Text>
 
             <div>
+              {/* TODO: correct link */}
               <MMLink
                 href="/"
                 className="font-artbrush !text-2xl"
