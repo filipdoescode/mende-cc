@@ -1,4 +1,3 @@
-import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
 
 interface MarketingLayoutProps {
@@ -13,8 +12,6 @@ export default async function MarketingLayout({
       <Header />
 
       <main className="flex-1">{children}</main>
-
-      <Footer />
     </div>
   )
 }

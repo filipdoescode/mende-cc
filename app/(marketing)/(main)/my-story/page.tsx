@@ -6,6 +6,7 @@ import Image2 from "@/public/images/my-story/2.webp"
 import Image3 from "@/public/images/my-story/3.webp"
 import Image4 from "@/public/images/my-story/4.webp"
 
+import { ROUTES } from "@/lib/routes"
 import { Heading } from "@/components/ui/heading"
 import { Text } from "@/components/ui/text"
 import { ConnectBanner } from "@/components/connect-banner"
@@ -178,7 +179,7 @@ export default function MyStoryPage() {
             </Text>
 
             <div>
-              {/* TODO: Correct link */}
+              {/* TODO: Functionaltiy link */}
               <MMLink href="/" arrowClassName="max-lg:hidden">
                 Tell me another story
               </MMLink>
@@ -272,9 +273,8 @@ export default function MyStoryPage() {
             </Text>
 
             <div>
-              {/* TODO: correct link */}
               <MMLink
-                href="/"
+                href={ROUTES.whyMendflow}
                 className="font-artbrush !text-2xl"
                 variant="secondary"
               >

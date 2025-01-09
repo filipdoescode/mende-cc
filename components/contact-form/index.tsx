@@ -34,10 +34,10 @@ const { useStepper, steps } = defineStepper(
     label: (
       <Heading
         as="h1"
-        className="font-artbrush !text-[80px] font-normal tracking-wide"
+        className="max-w-[700px] font-artbrush !text-[50px] font-normal tracking-wide lg:!text-[80px]"
       >
         It‘s going to be a{" "}
-        <TextHighlight variant="secondary">fun</TextHighlight> <br /> and
+        <TextHighlight variant="secondary">fun</TextHighlight> and
         <TextHighlight variant="secondary"> fulfilling</TextHighlight> process
       </Heading>
     ),
@@ -48,7 +48,7 @@ const { useStepper, steps } = defineStepper(
     label: (
       <Heading
         as="h1"
-        className="font-artbrush !text-[80px] font-normal tracking-wide"
+        className="font-artbrush !text-[50px] font-normal tracking-wide lg:!text-[80px]"
       >
         What inspired you to get in touch <br /> today?
       </Heading>
@@ -60,7 +60,7 @@ const { useStepper, steps } = defineStepper(
     label: (
       <Heading
         as="h1"
-        className="font-artbrush !text-[80px] font-normal tracking-wide"
+        className="font-artbrush !text-[50px] font-normal tracking-wide lg:!text-[80px]"
       >
         What’s your budget range?
       </Heading>
@@ -72,7 +72,7 @@ const { useStepper, steps } = defineStepper(
     label: (
       <Heading
         as="h1"
-        className="font-artbrush !text-[80px] font-normal tracking-wide"
+        className="font-artbrush !text-[50px] font-normal tracking-wide lg:!text-[80px]"
       >
         Let’s make it happen
       </Heading>
@@ -84,7 +84,7 @@ const { useStepper, steps } = defineStepper(
     label: (
       <Heading
         as="h1"
-        className="font-artbrush !text-[80px] font-normal tracking-wide"
+        className="font-artbrush !text-[50px] font-normal tracking-wide lg:!text-[80px]"
       >
         Quick Recap
       </Heading>
@@ -115,7 +115,7 @@ export function ContactForm() {
   }
 
   return (
-    <div className="space-y-24">
+    <div className="space-y-14 lg:space-y-24">
       {stepper.current.label}
 
       <Form {...form}>
@@ -133,7 +133,7 @@ export function ContactForm() {
               {!stepper.isFirst && (
                 <button
                   type="button"
-                  className="group relative my-auto inline-flex flex-col font-artbrush text-2xl text-[#959390]"
+                  className="group relative my-auto inline-flex flex-col font-artbrush !text-sm text-[#959390] lg:text-2xl"
                   onClick={stepper.prev}
                   disabled={stepper.isFirst}
                 >
@@ -141,7 +141,7 @@ export function ContactForm() {
                     <div className="flex items-center justify-center">
                       <Icons.brushArrow
                         variant="#959390"
-                        className="rotate-180 transition-transform group-hover:-translate-x-2"
+                        className="rotate-180 transition-transform group-hover:-translate-x-2 max-lg:max-w-[24px]"
                       />
                     </div>
                     Previous
@@ -167,7 +167,7 @@ export function ContactForm() {
                         aria-setsize={steps.length}
                         aria-selected={stepper.current.id === step.id}
                         className={cn(
-                          "flex size-[9px] cursor-auto items-center justify-center rounded-full bg-[#DADADA] p-0 hover:bg-[#DADADA]",
+                          "flex size-[6px] cursor-auto items-center justify-center rounded-full bg-[#DADADA] p-0 hover:bg-[#DADADA] lg:size-[9px]",
                           {
                             ["bg-secondary hover:bg-secondary/95"]:
                               stepper.current.id === step.id,
@@ -185,21 +185,21 @@ export function ContactForm() {
                 {stepper.isLast ? (
                   <Button
                     variant="secondary"
-                    className="h-full rounded-none px-12 py-6 text-4xl uppercase text-white"
+                    className="h-full rounded-none px-6 py-[10px] !text-base font-semibold uppercase text-white lg:px-12 lg:py-6 lg:text-4xl"
                   >
                     Submit
                   </Button>
                 ) : (
                   <button
                     type="submit"
-                    className="group relative inline-flex cursor-pointer flex-col font-artbrush text-2xl text-[#57967B]"
+                    className="group relative inline-flex cursor-pointer flex-col font-artbrush !text-sm text-[#57967B] lg:text-2xl"
                   >
                     <div className={cn("flex gap-4 font-artbrush")}>
                       Next
                       <div className="flex items-center justify-center">
                         <Icons.brushArrow
                           variant="#57967B"
-                          className="transition-transform group-hover:translate-x-2"
+                          className="transition-transform group-hover:translate-x-2 max-lg:max-w-[24px]"
                         />
                       </div>
                     </div>

@@ -22,7 +22,7 @@ export function ClientInfoStep() {
   } = useFormContext<ClientInfoFormValues>()
 
   return (
-    <div className="space-y-[60px] text-start">
+    <div className="space-y-10 text-start lg:space-y-[60px]">
       <div className="space-y-2">
         <label
           htmlFor={register("fullName").name}
@@ -65,7 +65,7 @@ export function ClientInfoStep() {
         )}
       </div>
 
-      <div className="grid grid-cols-2 gap-[30px]">
+      <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-[30px]">
         <div className="space-y-2">
           <label
             htmlFor={register("phone").name}

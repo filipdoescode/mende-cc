@@ -7,8 +7,9 @@ interface QuickRecapProps {
 }
 
 export function QuickRecapStep({ values }: QuickRecapProps) {
+  console.log("[values]", values)
   return (
-    <ul>
+    <ul className="flex flex-col gap-2">
       <li>
         <Text>
           Name: <strong>{values.fullName}</strong>
@@ -31,7 +32,7 @@ export function QuickRecapStep({ values }: QuickRecapProps) {
       </li>
       <li>
         <Text>
-          Budget: <strong>{values.budget}</strong>
+          Budget: <strong>[{String(values.budget)}]</strong>
         </Text>
       </li>
       <li>
