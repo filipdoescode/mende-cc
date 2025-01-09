@@ -1,14 +1,7 @@
+import { MakeItHappenFormValues } from "@/validation/contact"
 import { useFormContext } from "react-hook-form"
-import { z } from "zod"
 
 import { Input } from "@/components/ui/input"
-
-export const makeItHappenSchema = z.object({
-  timeframe: z.string().min(1, "Time frameis required"),
-  howDidYouFindMe: z.string(),
-})
-
-type MakeItHappenFormValues = z.infer<typeof makeItHappenSchema>
 
 export function MakeItHappenStep() {
   const {

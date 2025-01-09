@@ -1,6 +1,14 @@
 "use client"
 
 import * as React from "react"
+import { contactAction } from "@/actions/contact-action"
+import {
+  budgetRangeSchema,
+  clientInfoSchema,
+  ContactFormValues,
+  makeItHappenSchema,
+  purposeSchema,
+} from "@/validation/contact"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { defineStepper } from "@stepperize/react"
 import { useForm } from "react-hook-form"
@@ -11,19 +19,10 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Form } from "@/components/ui/form"
 import { Heading } from "@/components/ui/heading"
-import {
-  budgetRangeSchema,
-  BudgetRangeStep,
-} from "@/components/contact-form/budget-range"
-import {
-  clientInfoSchema,
-  ClientInfoStep,
-} from "@/components/contact-form/client-info"
-import {
-  makeItHappenSchema,
-  MakeItHappenStep,
-} from "@/components/contact-form/make-it-happen"
-import { purposeSchema, PurposeStep } from "@/components/contact-form/purpose"
+import { BudgetRangeStep } from "@/components/contact-form/budget-range"
+import { ClientInfoStep } from "@/components/contact-form/client-info"
+import { MakeItHappenStep } from "@/components/contact-form/make-it-happen"
+import { PurposeStep } from "@/components/contact-form/purpose"
 import { QuickRecapStep } from "@/components/contact-form/quick-recap"
 import { Icons } from "@/components/icons"
 import { TextHighlight } from "@/components/text-highlight"
@@ -103,14 +102,20 @@ export function ContactForm() {
 
   const values = form.getValues()
 
-  const onSubmit = (values: z.infer<typeof stepper.current.schema>) => {
-    if (stepper.isLast) {
-      console.log("[values]", values)
-      stepper.reset()
+  const onSubmit = async () => {
+    // v: z.infer<typeof stepper.current.schema>
+    if (!stepper.isLast) {
+      return stepper.next()
+    }
+
+    try {
+      await contactAction(values as ContactFormValues)
       toast.success("Thank you for reaching out! I'll get back to you soon.")
+      stepper.reset()
       form.reset()
-    } else {
-      stepper.next()
+    } catch (error) {
+      console.log("[e]", error)
+      toast.error("Something went wrong. Please try again.")
     }
   }
 

@@ -1,13 +1,7 @@
+import { PurposeFormValues } from "@/validation/contact"
 import { useFormContext } from "react-hook-form"
-import { z } from "zod"
 
 import { Textarea } from "@/components/ui/textarea"
-
-export const purposeSchema = z.object({
-  purpose: z.string().min(1, "Field is required"),
-})
-
-type PurposeFormValues = z.infer<typeof purposeSchema>
 
 export function PurposeStep() {
   const {

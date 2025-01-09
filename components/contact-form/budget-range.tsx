@@ -1,17 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { BudgetRangeFormValues } from "@/validation/contact"
 import { useFormContext } from "react-hook-form"
-import { z } from "zod"
 
 import { DualRangeSlider } from "../ui/range-slider"
 import { Text } from "../ui/text"
-
-export const budgetRangeSchema = z.object({
-  budget: z.array(z.number()),
-})
-
-type BudgetRangeFormValues = z.infer<typeof budgetRangeSchema>
 
 export function BudgetRangeStep() {
   const {
